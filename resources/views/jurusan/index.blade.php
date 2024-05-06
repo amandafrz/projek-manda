@@ -53,7 +53,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-        <h3 class="card-title">Data Jurusan</h3>
+        <a href="/jurusan/form/" class="btn btn-primary">Tambah Data </a>
 
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -66,7 +66,7 @@
         </div>
         <div class="card-body">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header">`
                   <h3 class="card-title">DataTable with default features</h3>
                 </div>
                 <!-- /.card-header -->
@@ -81,14 +81,23 @@
                     </tr>
                     </thead>
                     <tbody>
+                        @forelse ($jur as $item)
+                        <tr>
+                            <td>Trident</td>
+                            <td>Internet Explorer 4.0</td>
+                            <td>Win 95+</td>
+                            <td> 4</td>
+                          </tr>
+                        @empty
+                            <tr>
+                                <td colspan="4">Tidak Ada Data</td>
+                            </tr>
+                        @endforelse
                     <tr>
                       <td>Trident</td>
-                      <td>Internet
-                        Explorer 4.0
-                      </td>
+                      <td>Internet Explorer 4.0</td>
                       <td>Win 95+</td>
                       <td> 4</td>
-                     
                     </tr>
 
                     </tbody>
