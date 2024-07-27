@@ -83,10 +83,13 @@
                     <tbody>
                         @forelse ($jur as $item)
                         <tr>
-                            <td>Trident</td>
-                            <td>Internet Explorer 4.0</td>
-                            <td>Win 95+</td>
-                            <td> 4</td>
+                            <td>{{$nomor++}}</td>
+                            <td>{{$item->kode}}</td>
+                            <td>{{$item->jurusan}}</td>
+                            <td>
+                                <a href="" class="btn-info btn-sm"></a>
+                                <a href="" class="btn-info btn-sm"></a>
+                            </td>
                           </tr>
                         @empty
                             <tr>

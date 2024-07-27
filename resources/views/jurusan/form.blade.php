@@ -29,17 +29,17 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    @csrf
+
                     <form method="post" action="/jurusan/store">
+                        @csrf
                         <div class="mb-3">
                           <label class="form-label">Kode Jurusan</label>
                           <input type="text" class="form-control" name="kode">
                         </div>
                         <div class="mb-3">
                           <label  class="form-label">Nama Jurusan</label>
-                          <input type="text" class="form-control" name="jurusan">
+                          <input type="text" class="form-control" name="nama">
                         </div>
-
                         <button type="submit" class="btn btn-primary">Submit</button>
                       </form>
                 </div>

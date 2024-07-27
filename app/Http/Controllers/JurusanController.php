@@ -13,8 +13,9 @@ class JurusanController extends Controller
      */
     public function index()
     {
+        $nomor = 1;
         $jur = jurusan::all();
-        return view('jurusan.index',compact('jur'));
+        return view('jurusan.index',compact('nomor','jur'));
     }
 
     /**
@@ -30,7 +31,12 @@ class JurusanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $jur = new Jurusan;
+        $jur->kode = $request->kode;
+        $jur->jurusan = $request->nama;
+        $jur->save();
+
+        return redirect('/jurusan/');
     }
 
     /**
